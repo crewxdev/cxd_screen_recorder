@@ -29,6 +29,7 @@
         "security/ir.model.access.csv",
         "views/meeting_recorder.xml",
     ],
+    'license': "OPL-1",
     "installable": True,
     "application": True,
 }
