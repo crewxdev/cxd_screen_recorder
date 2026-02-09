@@ -1,0 +1,63 @@
+<odoo>
+
+    <record id="view_meeting_recorder_form" model="ir.ui.view">
+        <field name="name">meeting.recorder.form</field>
+        <field name="model">meeting.recorder</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+
+                    <field name="state" widget="statusbar"/>
+                </header>
+
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="user_id"/>
+                        </group>
+                        <group>
+                            <field name="filename"/>
+                            
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Recordings">
+                            <field name="video" filename="filename" widget="video_player"/>    
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_meeting_recorder_tree" model="ir.ui.view">
+        <field name="name">meeting.recorder.tree</field>
+        <field name="model">meeting.recorder</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="filename"/>
+                <field name="state"/>
+                <field name="user_id"/>
+            </list>
+        </field>
+    </record>
+
+    <menuitem id="menu_meeting_recorder_root" name="Meetings"/>
+    
+    <record id="action_meeting_recorder" model="ir.actions.act_window">
+        <field name="name">Meeting Recordings</field>
+        <field name="res_model">meeting.recorder</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_meeting_recorder"
+              name="Meeting Recordings"
+              parent="menu_meeting_recorder_root"
+              action="action_meeting_recorder"/>
+
+    
+
+</odoo>

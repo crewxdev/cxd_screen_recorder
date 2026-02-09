@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="MeetingRecorderSystray" owl="1">
+    <div class="o_systray_item align-self-center">
+        <button class="bg-transparent o-dropdown dropdown-toggle dropdown"
+                t-on-click="toggle">
+            <t t-if="state.recording">
+                <i class="fa fa-stop-circle" aria-hidden="true"></i>
+            </t>
+            <t t-else=""><i class="fa fa-video-camera" aria-hidden="true"></i></t>
+        </button>
+    </div>
+</t>
+
+</templates>

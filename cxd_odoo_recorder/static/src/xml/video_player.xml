@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="VideoBinaryPlayer" owl="1">
+    <div class="o_video_player">
+
+            <video controls="controls" style="width: 100%; max-height: 360px;">
+                <source t-att-src="videoUrl" type="video/webm"/>
+                Your browser does not support video.
+            </video>
+        
+    </div>
+</t>
+
+</templates>
